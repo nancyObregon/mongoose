@@ -23,5 +23,6 @@ fifteen
 
 // Array.prototype.map()
 // 2. Give us an array of the inventor first and last names
-const fullNames = inventors.map((inventor) => `${inventor.first} ${inventor.last}`)
+// deconstruyendo las propiedades para tener a mismo nivel
+const fullNames = inventors.map(({ first, last }) => `${first} ${last}`)
 fullNames
