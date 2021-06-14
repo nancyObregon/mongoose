@@ -1,5 +1,7 @@
 // import { fifteen } from './helpers'
 
+import { dates } from './utils/inventors.utils'
+
 const inventors = [
 	{ first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
 	{ first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -19,10 +21,20 @@ const inventors = [
 // 1. Filter the list of inventors for those who were born in the 1500's
 const fifteen = inventors.filter((inventor) => inventor.year >= 1500 && inventor.year < 1600)
 
-fifteen
+console.log(fifteen)
+
+const resultFitteen = dates(inventors, 1500, 1600)
+
+console.log(resultFitteen)
 
 // Array.prototype.map()
 // 2. Give us an array of the inventor first and last names
 // deconstruyendo las propiedades para tener a mismo nivel
-const fullNames = inventors.map(({ first, last }) => `${first} ${last}`)
-fullNames
+// const fullNames = inventors.map(({ first, last }) => `${first} ${last}`)
+// fullNames
+
+// Array.prototype.reduce()
+// 4. How many years did all the inventors live?
+// const totalYears = inventors.reduce((total, inventor) => {
+// 	return total + (inventor.passed - inventor.year)
+// }, 0)
